@@ -1,0 +1,15 @@
+{
+  "scripts": {
+    "start": "webpack --progress --colors --watch",
+    "compile": "webpack"
+  },
+  "babel": {
+    "presets": [
+      "es2015"
+    ]
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "es6-transpiler-config": "github:FND/es6-transpiler-config"
+  }
+}
