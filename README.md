@@ -10,7 +10,7 @@ Getting Started
 
 * install this repository:
 
-        $ npm install --save-dev github:FND/es6-transpiler-config
+        $ npm install --save-dev es6-transpiler-config
 
 * configure Babel in `package.json`¹:
 

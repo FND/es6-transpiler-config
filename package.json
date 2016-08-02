@@ -2,7 +2,7 @@
   "name": "es6-transpiler-config",
   "description": "simple utility for transpiling ES6 and beyond",
   "license": "MIT",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "repository": "FND/es6-transpiler-config",
   "scripts": {
     "test": "eslint --cache *.js && echo ✓"
@@ -17,6 +17,6 @@
     "webpack": ">=1.13"
   },
   "devDependencies": {
-    "eslint-config-fnd": "eslint-config-fnd"
+    "eslint-config-fnd": "^1.0.2"
   }
 }
