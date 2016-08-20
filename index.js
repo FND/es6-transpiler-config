@@ -1,8 +1,6 @@
 /* eslint-env node */
 "use strict";
 
-let path = require("path");
-
 // `entryPoint` is the path to the manifest module (typically `"./src/index.js"`)
 // `target` is the path to the compiled bundle (typically `"./dist/bundle.js"`)
 // `options.extensions` is a list of additional file extensions for loading
@@ -11,36 +9,12 @@ let path = require("path");
 // (e.g. `{ jquery: "jQuery" }` - the key represents the respective module
 // name, the value refers to a global variable)
 //
-// TODO: support for exposing library APIs (via `library` and `libraryTarget`)
-module.exports = function generateConfig(entryPoint, target, options = {}) {
-	let { extensions, externals } = options;
-
-	let cfg = {
-		entry: path.resolve(entryPoint),
-		output: {
-			path: path.resolve(path.dirname(target)),
-			filename: path.basename(target)
-		},
-		resolve: {
-			root: path.resolve("./node_modules")
-		},
-		module: {
-			loaders: [{
-				loader: "babel-loader",
-				query: { // complements Babel configuration in `package.json`
-					cacheDirectory: true
-				}
-			}]
-		}
-	};
-
-	if(extensions) {
-		cfg.resolve.extensions = ["", ".js"].concat(extensions);
+// TODO: support for minification
+module.exports = { // getters ensure we only import what's actually being used
+	get rollup() {
+		return require("./src/rollup");
+	},
+	get webpack() {
+		return require("./src/webpack");
 	}
-
-	if(externals) { // excluded from bundle
-		cfg.externals = externals;
-	}
-
-	return cfg;
 };

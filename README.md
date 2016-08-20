@@ -8,7 +8,7 @@ subset so most users don't have to worry about the underlying toolchain.
 Getting Started
 ---------------
 
-* install this repository:
+* install this package:
 
         $ npm install --save-dev es6-transpiler-config
 
@@ -20,23 +20,23 @@ Getting Started
     }
     ```
 
-    (cf. `samples/package.json`)
+    (cf. `samples/webpack/package.json`)
 
 * create a `webpack.config.js`:
 
     ```javascript
-    let generateConfig = require("es6-transpiler-config");
+    let generateConfig = require("es6-transpiler-config").webpack;
 
     module.exports = generateConfig("./src/index.js", "./dist/bundle.js");
     ```
 
-    (cf. `samples/webpack.config.js`)
+    (cf. `samples/webpack/webpack.config.js`)
 
 * start transpiling:
 
         $ webpack --progress --colors --watch
 
-    (cf. script commands in `samples/package.json`)
+    (cf. script commands in `samples/webpack/package.json`)
 
 
 ¹ While this might also be added to webpack's configuration, that would make it

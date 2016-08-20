@@ -10,6 +10,6 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "es6-transpiler-config": "github:FND/es6-transpiler-config"
+    "es6-transpiler-config": "^1.0.2"
   }
 }

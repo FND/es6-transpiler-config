@@ -5,7 +5,7 @@
   "version": "1.0.2",
   "repository": "FND/es6-transpiler-config",
   "scripts": {
-    "test": "eslint --cache *.js && echo ✓"
+    "test": "eslint --cache *.js src samples && echo ✓"
   },
   "engines": {
     "node": ">=6"

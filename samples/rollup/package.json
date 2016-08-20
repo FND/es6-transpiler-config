@@ -1,0 +1,15 @@
+{
+  "scripts": {
+    "start": "rollup --config --watch",
+    "compile": "rollup --config"
+  },
+  "babel": {
+    "presets": [
+      "es2015-rollup"
+    ]
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "es6-transpiler-config": "^1.0.2"
+  }
+}
